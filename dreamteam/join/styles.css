@@ -1,0 +1,916 @@
+body{
+	font-family: Verdana,Geneva,sans-serif;
+	height: 100%;
+	width: 100%;
+}
+header{
+	display: flex;
+justify-content: space-between;
+align-items: center;
+
+position: relative;
+
+	border-bottom: 1px solid #e2e2e2;
+}
+header a{
+	line-height: 14px;
+	text-decoration:none; 
+	font-size: 14px;
+color: #7d7d7d;
+	text-transform: uppercase;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	
+	
+}
+header a:hover{
+	color: #000;
+}
+.header_model{
+	display: flex;
+	align-items: center;
+}
+.header_item{
+
+    padding: 22px 14px;
+    outline: 0;
+    text-decoration: none;
+    color: #111;
+    outline: 0;
+}
+.header_item:last-child {
+    padding-right: 24px;
+}
+.header_item:first-child {
+    padding-left: 24px;
+}
+.logo{
+position: absolute;
+left: 50%;
+margin-left: -150px;
+font: normal 14px/1.4 'AvenirNextCyr';
+	
+	
+}
+.logo p{
+font-size: 1.6em;
+text-align: center;
+width: 300px;
+
+font-weight: 600;
+
+}
+.modellist{
+display: flex;
+max-width: 1280px;
+margin: 0 auto;
+justify-content: center;
+padding: 34px 20px 100px;
+box-sizing: border-box;
+flex-wrap: wrap;
+position: relative;
+}
+.modellist figure {
+    position: relative;
+
+    overflow: hidden;
+ 
+    text-align: center;
+    cursor: pointer;
+}
+figure {
+    margin: 0;
+    display: block;
+}
+.modellist figure figcaption, .modellist figure figcaption > a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.modellist figure figcaption {
+   
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+figure.model p {
+    padding: 60px 2.5em;
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(0,20px,0);
+    transform: translate3d(0,20px,0);
+}
+.modellist figure p {
+    letter-spacing: 1px;
+    font-size: 68.5%;
+}
+.modellist figure figcaption > a {
+    z-index: 1000;
+    text-indent: 200%;
+    white-space: nowrap;
+    font-size: 0;
+    opacity: 0;
+}
+.modellist figure figcaption, .modellist figure figcaption > a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.model{
+	margin: 5px;
+display: block;
+width: 300px;
+height: 390px;
+text-decoration: none;
+overflow: hidden;
+display: flex;
+flex-direction: column;
+}
+.modelimg{
+
+flex-grow: 1;
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+
+position: relative;
+}
+
+
+.modelname {
+  text-align: center;
+    flex-shrink: 0;
+    padding: 10px 10px 10px 0;
+    font-size: 14px;
+    
+    color: #7d7d7d;
+  text-transform: uppercase;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+}
+
+.container{
+  padding-top: 20px;
+	margin-top: 20px;
+	display: flex;
+  justify-content: center;
+  border-top: 1px solid #e2e2e2;
+}
+.carousel-hider {
+
+width: 800px;
+height: 500px;
+position: relative;
+  overflow: hidden;
+}
+.carousel-list{
+	list-style: none;
+	display: flex;
+	width: 100vw;
+	padding: 0px;
+	position: relative;
+}
+.slide {
+
+width: 800px;
+height: 500px;
+flex-shrink: 0;
+position: relative;
+display: flex;
+}
+.photo {
+    width: 100%;
+    margin: 5px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 1px;
+}
+.carousel-arrow-left{
+	margin-right: 100px;
+  vertical-align: middle;
+
+	text-align: center;
+  
+width: 100px;
+height: 500px;
+}
+.carousel-arrow-right{
+	 
+margin-left: 100px;
+	text-align: center;
+  
+width: 100px;
+height: 500px;
+}
+.arrow {
+	margin:0 auto;
+
+ 
+  width: 60px;
+  height: 60px;
+  background: transparent;
+  text-indent: -9999px;
+  border-top: 2px solid #bfbfbf;
+  border-left: 2px solid #bfbfbf;
+  transition: all 250ms ease-in-out;
+  text-decoration: none;
+  color: transparent;
+}
+
+.arrow:hover {
+  border-color: gray;
+  border-width: 5px;
+}
+
+.arrow:before {
+  display: block;
+  height: 200%;
+  width: 200%;
+  margin-left: -50%;
+  margin-top: -50%;
+  content: "";
+  transform: rotate(45deg);
+}
+
+.arrow.prev {
+	margin-top: 200px;
+  transform: rotate(-45deg);
+  left: 0;
+}
+.arrow.next {
+	margin-top: 200px;
+  transform: rotate(135deg);
+  right: 0;
+}
+#p_prldr{
+position: fixed;
+left: 0;
+top: 0;
+right:0;
+bottom:0;
+background: white;
+z-index: 30;}
+ 
+.contpre small{font-size:25px;}
+ 
+.contpre{
+margin-top: 15%;
+margin-left: auto;
+margin-right: auto;
+width: 300px;
+height: 300px;
+
+
+color:#fff;
+font-size:40px;
+letter-spacing:-2px;
+
+line-height:35px;}
+ 
+#p_prldr .svg_anm {
+position: absolute;
+width: 300px;
+height: 300px;
+background: url(../images/logo2.jpg) center center no-repeat;
+background-size:300px;    
+margin: -16px 0 0 -16px;}
+figure.model:hover img {
+  opacity: 0.4;
+}
+
+figure.model figcaption::before,
+figure.model figcaption::after {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  bottom: 68px;
+  left: 30px;
+  content: '';
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+}
+
+figure.model figcaption::before {
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: scale(0,1);
+  transform: scale(0,1);
+}
+
+figure.model figcaption::after {
+  border-right: 1px solid #fff;
+  border-left: 1px solid #fff;
+  -webkit-transform: scale(1,0);
+  transform: scale(1,0);
+}
+
+figure.model h2 {
+  padding-top: 30%;
+  -webkit-transition: -webkit-transform 0.35s;
+  transition: transform 0.35s;
+  -webkit-transform: translate3d(0,-20px,0);
+  transform: translate3d(0,-20px,0);
+}
+
+
+
+figure.model:hover figcaption::before,
+figure.model:hover figcaption::after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+figure.model:hover h2,
+figure.model:hover p {
+  opacity: 1;
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+.questionnaire{
+  width: 845px;
+ border: 1px solid #1c1c1c;
+  height: auto;
+  margin: 50px auto;
+  position: relative;
+}
+.logheader{
+font:normal;
+position: absolute;
+margin: auto;
+margin-bottom: auto;
+left: 0;
+right: 0;
+width: 200px;
+top: -16px;
+background: #ffffff;
+text-align: center;
+font-size: 1.4em;
+}
+.btn_container{
+    display: block;
+    text-align: center;
+    margin-top: 60px;
+    width: 100%;
+}
+.btn{
+width: 100%;
+border: none;
+border-top: 1px solid #1c1c1c;
+font: 600 1.28em/1.4 'PFAdamantPro';
+background: transparent;
+padding: 10px 20px;
+text-decoration: none;
+cursor: pointer;
+-webkit-transition: 0.3s;
+transition: 0.3s;
+-ms-transition: 0s;
+}
+
+.input, .textarea {
+    font: normal 1em/1.4 'AvenirNextCyr';
+    border: none;
+        border-bottom-width: medium;
+        border-bottom-style: none;
+        border-bottom-color: currentcolor;
+    border-bottom-width: medium;
+    border-bottom-style: none;
+    border-bottom-color: currentcolor;
+    border-radius: 0;
+    color: #1c1c1c;
+    -webkit-appearance: none;
+}
+.questionnaire-input{
+    display: block;
+    margin-top: 35px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 460px;
+    background: transparent;
+    border-bottom: 1px solid #1c1c1c;
+    padding-bottom: 5px;
+}
+.center{
+  width: 460px;
+  margin: 0 auto;
+}
+.left{
+
+  float: left;
+  width: 220px;
+}
+.right{
+ 
+  float: right;
+  width: 220px;
+}
+.questionnaire-input-min{
+display: block;
+text-align: center;
+    margin-top: 35px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    background: transparent;
+    border-bottom: 1px solid #1c1c1c;
+    padding-bottom: 5px;
+}
+
+.questionnaire-input-min:focus{
+  border-bottom: 1px solid green;
+}
+
+.questionnaire-input:focus{
+  border-bottom: 1px solid green;
+}
+
+*:focus {outline: none;}
+
+input:invalid{
+    box-shadow:none;
+}
+
+.imageblock{
+  width: 460px;
+  margin: 0 auto;
+  display: flex;
+}
+.tableleft{
+display: table-cell;
+width: 50%;
+}
+.tableright{
+display: table-cell;
+width: 50%;
+}
+.tableimage{
+  position: relative;
+  border: 1px solid #1c1c1c;
+  background-image: url('images/placeholder.png');
+  background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+  cursor: pointer;
+  width: 220px;
+  margin: 5px;
+  height: 270px;
+  
+}
+.tableimage:hover{
+  opacity: 0.3;
+}
+.upload{
+  position: absolute;
+  opacity: 1;
+  color: black;
+  margin-top: 124.5px;
+  text-align: center;
+  display: none;
+  
+  left:23%;
+}
+.tableimage:hover .upload{
+  opacity: 1;
+   color: black;
+
+  display: block;
+  
+}
+.admin{
+  width: 400px;
+  border: 1px solid #1c1c1c;
+  height: auto;
+  margin: 50px auto;
+  position: relative;
+}
+.select{
+  
+  width: 613px;
+  height: 400px;
+  margin: 50px auto;
+}
+.select_left{
+  display: inline-block;
+  width: 300px;
+}
+.select_border{
+  display: inline-block;
+  height: 400px;
+  width: 1px;
+  background-color: black;
+}
+.select_right{
+  display: inline-block;
+  width: 300px;
+}
+.button{
+   overflow: hidden;
+   display: block;
+  text-align: center;
+  width: 150px;
+  height: auto;
+  margin:180px auto;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+.button a{
+  text-decoration: none;
+  color: black;
+}
+.button p {
+  font: 600 1.28em/1.4 'PFAdamantPro';
+ 
+  padding: 10px 20px;
+}
+.button p:hover{
+background-color: black;
+}
+.button p:hover a {
+color: white;
+
+}
+.jointable{
+  margin-top: 30px;
+  width: 100%;  
+}
+.jointable tr{
+  border-bottom: 1px solid #aaa;
+}
+.jointable tr:last-child{
+  border-bottom: 0px solid #aaa;
+}
+.jointable tr:first-child{
+  border-top: 1px solid #aaa;
+}
+.jointable td{
+  padding: 10px 50px;
+  vertical-align: middle;
+  width: 100%;
+}
+.jointable td a{
+  text-decoration: none;
+  color: black;
+}
+.btn a{
+  color: black;
+  text-decoration: none;
+}
+.btn:hover a{
+  color: white;
+}
+.file{
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+.fileupload input{
+
+display: none;/* скрываем input file */
+
+}
+
+/* задаем стили кнопки выбора файла*/
+
+.fileupload {
+margin-top: 30px;
+margin-left: auto;
+margin-right: auto;
+position: relative;
+overflow: hidden;
+width: 250px;
+height: 40px;
+border: 1px solid black; ;
+border-radius: 10px;
+color: black;
+text-align: center;
+
+}
+
+.fileupload:hover {
+
+background: black;
+color: white;
+}
+
+/* Растягиваем label на всю область блока .file-upload */
+
+.fileupload label {
+
+display: block;
+
+position: absolute;
+
+top: 0;
+
+left: 0;
+
+width: 100%;
+
+height: 100%;
+
+cursor: pointer;
+
+}
+
+/* стиль текста на кнопке*/
+
+.fileupload span {
+
+
+font: 600 1.28em/1.6 'PFAdamantPro';
+
+}
+.modelheader{
+  width: 300px;
+  height: auto;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  font: normal 14px/1.4 'AvenirNextCyr';
+}
+.modelheader h2{
+text-transform: uppercase;
+font-size: 1.6em;
+text-align: center;
+width: 300px;
+
+
+}
+.social{
+  display: flex;
+  width: 150px;
+  height: auto;
+  margin: 0 auto;
+}
+.social ul li{
+  
+  width: 24px;
+  height:24px;
+  display: inline;
+}
+.social ul{
+  margin-top: 10px;
+  display: flex;
+
+}
+.social img{
+  padding: 8px;
+} 
+.social ul li:first-child{
+
+      margin-left: 30px;
+}
+.social ul li:last-child{
+
+  margin-left: 42px;
+      margin-right: 30px;
+}
+.social ul li a{
+  display: flex;
+  width: 24px;
+  height:24px;
+
+}
+.vk a{
+background-image:url('../images/vk.png');
+}
+.vk a:hover{
+
+background-image:url('../images/vk2.png');
+}
+.inst a{
+background-image:url('../images/inst.png');
+}
+.inst a:hover{
+
+background-image:url('../images/inst2.png');
+}
+footer{
+padding: 40PX 0;
+border-top: 1px solid #e2e2e2;
+color: #7d7d7d;
+}
+.footerline{
+  width: 980px;
+  margin: 0 auto;
+}
+.footerleft{
+
+    display: inline-block;
+    vertical-align: middle;
+    width: 33.3333%;
+    font-size: 12px;
+
+}
+.footercenter{
+    display: inline-block;
+    vertical-align: middle;
+    width: 33.3333%;
+    font-size: 12px;
+    text-align: center;
+}
+.footercenter a{
+    margin: 0 10px;
+    
+    width: 24px;
+    height: 24px;
+}
+.vk{
+background-image:url('../images/vk.png');
+}
+.vk:hover{
+
+background-image:url('../images/vk2.png');
+}
+.scrolltotop{
+  position: fixed;
+  right: 20px;
+  bottom: 60px;
+  background: #7d7d7d;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+ 
+  cursor: pointer;
+  
+  transition: all .5s;
+  display: none;
+  text-align: center;  
+}
+.scrolltotop:after{
+  content: '⇧';
+  color: white;
+  line-height: 40px;
+}
+.scrolltotop:hover{
+ opacity: .5;
+
+}
+input[type="radio"] {
+  visibility: hidden;
+  position: absolute;
+}
+.radio{
+   
+    display: block;
+    position: relative;
+    margin: 0 auto 35px auto;
+    width: 460px;
+    height: auto;
+   
+}
+
+.radio ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+}
+.radio ul li{
+  width: 50%;
+  color: #AAAAAA;
+  display: block;
+  position: relative;
+  float: left;
+  height: 100px;
+  
+}
+.radio ul li input[type=radio]{
+  position: absolute;
+  visibility: hidden;
+}
+.radio ul li label{
+  display: block;
+  position: relative;
+  font-weight: 300;
+  font-size: 1.35em;
+  padding: 25px 25px 25px 110px;
+  margin: 10px auto;
+  height: 30px;
+  z-index: 9;
+  cursor: pointer;
+  -webkit-transition: all 0.25s linear;
+}
+ul li:hover label{
+  color: #000000;
+}
+
+ul li .check{
+  display: block;
+  position: absolute;
+  border: 5px solid #AAAAAA;
+  border-radius: 100%;
+  height: 35px;
+  width: 35px;
+  top: 30px;
+  left: 50px;
+  z-index: 5;
+  transition: border .25s linear;
+  -webkit-transition: border .25s linear;
+}
+
+.radio ul li:hover .check {
+  border: 5px solid #000000;
+}
+
+.radio ul li .check::before {
+  display: block;
+  position: absolute;
+  content: '';
+  border-radius: 100%;
+  height: 15px;
+  width: 15px;
+  top: 5px;
+  left: 5px;
+  margin: auto;
+  transition: background 0.25s linear;
+  -webkit-transition: background 0.25s linear;
+}
+
+.radio input[type=radio]:checked ~ .check {
+  border: 5px solid green;;
+}
+
+.radio input[type=radio]:checked ~ .check::before{
+  background: green;;
+}
+
+.radio input[type=radio]:checked ~ label{
+  color: green;;
+}
+.active{
+  color: black;
+}
+.input-requirements {
+  font-size: 12px;
+  font-style: italic;
+  text-align: left;
+  list-style: disc;
+  list-style-position: inside;
+  max-width: 460px;
+  margin: 10px auto;
+  color: rgb(150,150,150);
+}
+.text p + .input-requirements,
+input:not([type="submit"]) + .input-requirements {
+    overflow: hidden;
+    max-height: 0;
+    -webkit-transition: max-height 1s ease-out;
+    transition: max-height 1s ease-out;
+}
+.text p:hover + .input-requirements,
+input:not([type="submit"]):hover + .input-requirements,
+input:not([type="submit"]):focus + .input-requirements,
+input:not([type="submit"]):active + .input-requirements {
+  max-height: 1000px; /* any large number (bigger then the .input-requirements list) */
+  transition: max-height 1s ease-in;
+}
+.not_error{
+  color: green;
+}
+.error{
+  color: red;
+}
+.text{
+  width: 460px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font: normal 1em/1.4 'AvenirNextCyr';
+}
+.progress_div {
+    display: none;
+    border: #7d7d7d 1px solid;
+    margin: 228px 10px 10px 10px;
+    border-radius: 4px;
+    text-align: center;
+}
+.progress_bar {
+    background-color: #7d7d7d;
+    height: 20px;
+    color: #FFFFFF;
+    width: 0%;
+    -webkit-transition: width .3s;
+    -moz-transition: width .3s;
+    transition: width .3s;
+}
+.tableimage .photol{
+
+  display: none;
+  width: 100%;
+  height: 100%;
+}
